@@ -17,7 +17,6 @@
   box-sizing: border-box;
 }
 body {
-  max-width: 1440px;
   width: 75vw;
   margin: 0 auto;
   height: 100vh;
@@ -81,6 +80,7 @@ ul li a {
 @media screen and (max-width: 375px) {
   body {
     width: 100%;
+    margin: 0;
   }
   header {
     padding: 0 1.5rem;

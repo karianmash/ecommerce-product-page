@@ -189,7 +189,7 @@
   /* Previous price */
   .price-tag .prices span:last-child {
     position: absolute;
-    right: 1.5rem;
+    right: 4rem;
     font-size: 15px;
   }
   .price-tag > span {
