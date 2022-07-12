@@ -11,29 +11,19 @@
   --Black: hsl(0, 0%, 0%);
 }
 .content-container {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   margin: 3rem 2rem;
-  grid-template-columns: 42% 58%;
-  grid-template-rows: 80vh;
-  grid-template-areas: "product-images description";
 }
 /* First grid item one row one column one */
 .product-images {
-  display: grid;
-  grid-area: product-images;
-  grid-gap: 20px;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 75% 25%;
-  grid-template-areas:
-    "main-image main-image main-image main-image"
-    "thumbnail1 thumbnail2 thumbnail3 thumbnail4";
+  display: flex;
+  flex-direction: column;
 }
 /* Styling the main image */
 .main-image {
-  grid-area: main-image;
   height: 100%;
   width: 100%;
-  background-color: aqua;
   border-radius: 15px;
 }
 .main-image img {
@@ -42,33 +32,28 @@
   border-radius: 15px;
   object-fit: cover;
 }
-/* Styling the thumbnails */
-.thumbnail1 {
-  grid-area: thumbnail1;
-}
-.thumbnail2 {
-  grid-area: thumbnail2;
-}
-.thumbnail3 {
-  grid-area: thumbnail3;
-}
-.thumbnail4 {
-  grid-area: thumbnail4;
+.product-images .thumbnails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 .thumbnail {
-  height: 65%;
+  height: 80%;
   width: 100%;
+  padding-right: 1rem;
+}
+.thumbnail:last-child {
+  padding-right: 0;
 }
 .thumbnail img {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   object-fit: cover;
 }
 /* Styling the description section */
 /* First grid item two row one column two */
 .description {
-  grid-area: description;
   padding: 2.5rem 0 0 6rem;
 }
 .description h4 {
@@ -155,4 +140,71 @@
 }
 .increment-decrement a img {
   margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  /* First grid item one row one column one */
+  .product-images {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Styling the main image */
+  .main-image img {
+    border-radius: 0%;
+    height: 18rem;
+  }
+  .product-images .thumbnails {
+    display: none;
+  }
+  /* Styling the description section */
+  /* First grid item two row one column two */
+  .description {
+    padding: 1rem 1.5rem;
+  }
+  .description h2 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+  .description p {
+    margin-bottom: 1rem;
+  }
+  /* Price tag */
+  .price-tag {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-tag .prices {
+    flex-direction: row;
+  }
+  /* Actual price */
+  .price-tag .prices span:first-child {
+    font-size: 23px;
+    padding-bottom: 0.4rem;
+  }
+  /* Previous price */
+  .price-tag .prices span:last-child {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 15px;
+  }
+  .price-tag > span {
+    position: absolute;
+    left: 7rem;
+  }
+  /* Styling minus plus buttons */
+  .increment-decrement {
+    flex-direction: column;
+  }
+  .increment-decrement div:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  .increment-decrement a img {
+    margin-right: 1rem;
+  }
 }

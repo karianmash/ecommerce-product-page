@@ -34,6 +34,9 @@ header {
 .logo {
   flex: 1;
 }
+.logo img:first-child {
+  display: none;
+}
 /* List items */
 ul {
   flex: 2;
@@ -73,4 +76,44 @@ ul li a {
 .avatar img {
   width: 3rem;
   height: 3rem;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+  header {
+    padding: 0 1.5rem;
+  }
+  .logo {
+    display: flex;
+  }
+  .logo img:first-child {
+    display: block;
+    cursor: pointer;
+    margin-right: 0.7rem;
+  }
+  .logo img:last-child {
+    height: 1rem;
+    width: auto;
+  }
+  /* List items */
+  ul {
+    display: none;
+  }
+  /* Style cart */
+  .cart {
+    padding-right: 1rem;
+  }
+  .cart img {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  /* End styling cart */
+  /* Style avatar */
+  .avatar img {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 1rem;
+  }
 }
