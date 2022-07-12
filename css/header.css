@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* Primary */
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-orange: hsl(25, 100%, 94%);
+  /* Neutral */
+  --Very-vark-blue: hsl(220, 13%, 13%);
+  --Dark-grayish-blue: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1440px;
+  width: 75vw;
+  margin: 0 auto;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+}
+header {
+  display: flex;
+  height: 5rem;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--Grayish-blue);
+}
+.logo {
+  flex: 1;
+}
+/* List items */
+ul {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+}
+ul li {
+  list-style: none;
+  font-size: 16px;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--Dark-grayish-blue);
+}
+/* End styling list items */
+
+.cart-avatar {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Style cart */
+.cart {
+  padding-right: 3rem;
+}
+.cart img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+/* End styling cart */
+/* Style avatar */
+.avatar {
+  justify-self: end;
+}
+.avatar img {
+  width: 3rem;
+  height: 3rem;
+}
