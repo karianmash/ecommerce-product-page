@@ -2,5 +2,5 @@
 
 Frontend mentor challenge
 
-# [Demo](./design/desktop-preview.jpg)
+# [Demo](https://ecommerce-product-page-ecru.vercel.app/)
 
