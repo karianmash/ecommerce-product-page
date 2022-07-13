@@ -130,7 +130,9 @@
 .increment-decrement a {
   text-decoration: none;
 }
-.increment-decrement div:last-child {
+.increment-decrement > a div {
+  display: flex;
+  align-items: center;
   padding: 0.8rem 2rem;
   border-radius: 10px;
   color: #fff;
@@ -138,11 +140,35 @@
   font-size: 16px;
   background-color: var(--Orange);
 }
-.increment-decrement a img {
+.increment-decrement a div img {
   margin-right: 1.5rem;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1250px) {
+  /* Styling the main image */
+  .main-image {
+    height: 60%;
+  }
+  .thumbnails {
+    height: 40%;
+  }
+  .thumbnail {
+    height: 100%;
+  }
+  .description {
+    height: 100%;
+  }
+  .increment-decrement a div {
+    font-size: 13px;
+  }
+  .increment-decrement a div img {
+    margin-right: 0.5rem;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .content-container {
     display: flex;
     flex-direction: column;
